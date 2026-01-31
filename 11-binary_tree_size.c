@@ -7,11 +7,9 @@
  */
 size_t binary_tree_size(const binary_tree_t *tree)
 {
-	size_t i = 0;
+	size_t i = 1;
 	if (tree != NULL)
 	{
-		if (tree->left == NULL && tree->right == NULL)
-			return (1);
 		if (tree->left != NULL)
 			i = binary_tree_size(tree->left) + 1;
 		if (tree->right != NULL)
