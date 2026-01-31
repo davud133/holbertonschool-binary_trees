@@ -13,7 +13,7 @@ binary_tree_t *binary_tree_sibling(binary_tree_t *node)
 	{
 		if (node->parent->right != NULL)
 			return (node->parent->right);
-		return (NULL)
+		return (NULL);
 	}
 	else
 	{
