@@ -13,9 +13,9 @@ int height(const binary_tree_t *tree)
 	else
 		return (0);
 	if (left > right)
-		return  (left + 1);
+		return  (left);
 	else
-		return (right + 1);
+		return (right);
 }
 /**
  * binary_tree_balance - measures the balance factor of a binary tree
