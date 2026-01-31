@@ -1,8 +1,8 @@
 #include "binary_trees.h"
 int height(const binary_tree_t *tree)
 {
-	int left = 0;
-	int right = 0;
+	int left = 1;
+	int right = 1;
 	if (tree != NULL)
 	{
 		if (tree->left != NULL)
