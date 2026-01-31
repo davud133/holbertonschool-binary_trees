@@ -1,8 +1,15 @@
 #include "binary_trees.h"
+/**
+ * height - gives height of a tree
+ * @tree: tree
+ *
+ * Return: int
+ */
 int height(const binary_tree_t *tree)
 {
 	int left = 1;
 	int right = 1;
+
 	if (tree != NULL)
 	{
 		if (tree->left != NULL)
