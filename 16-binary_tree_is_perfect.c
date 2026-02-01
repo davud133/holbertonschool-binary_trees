@@ -1,11 +1,11 @@
-#inlcude "binary_trees.h"
+#include "binary_trees.h"
 /**
  * height - gives the height of a tree
  * @tree: binary tree
  *
  * Return: height of a tree
  */
-int height(binary_tree_t *tree)
+int height(const binary_tree_t *tree)
 {
 	int left = 0;
 	int right = 0;
@@ -28,7 +28,7 @@ int height(binary_tree_t *tree)
  *
  * Return: 1 on success 0 on failure
  */
-int full(binary_tree_t *tree)
+int full(const binary_tree_t *tree)
 {
 	int i = 1;
 	if (tree->left == NULL && tree->right == NULL)
