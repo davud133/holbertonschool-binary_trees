@@ -37,12 +37,14 @@ int full(const binary_tree_t *tree)
 	{
 		if (tree->left != NULL)
 			i = full(tree->left);
+		if (i == 0)
+			return (0);
 		if (tree->right != NULL)
 			i = full(tree->right);
 	}
 	else
 		return (0);
-	return (1);
+	return (i);
 }
 /**
  * binary_tree_is_perfect - checks if a binary tree is perfect
