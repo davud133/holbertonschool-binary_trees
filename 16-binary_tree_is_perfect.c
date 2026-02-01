@@ -1,4 +1,5 @@
 #include "binary_trees.h"
+
 /**
  * height - gives the height of a tree
  * @tree: binary tree
@@ -22,6 +23,7 @@ int height(const binary_tree_t *tree)
 	else
 		return (right);
 }
+
 /**
  * full - check if a tree is full
  * @tree: binary tree
@@ -47,6 +49,7 @@ int full(const binary_tree_t *tree)
 	else
 		return (0);
 }
+
 /**
  * binary_tree_is_perfect - checks if a binary tree is perfect
  * @tree: binary tree
@@ -60,10 +63,22 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 
 	if (tree == NULL)
 		return (0);
-	if (tree->left != NULL)
-		left = height(tree->left);
-	if (tree->right != NULL)
-		right = height(tree->right);
-	return ((left == right) && full(tree));
+
+	/* leaf is perfect */
+	if (tree->left == NULL && tree->right == NULL)
+		return (1);
+
+	/* must have both children */
+	if (tree->left == NULL || tree->right == NULL)
+		return (0);
+
+	left = height(tree->left);
+	right = height(tree->right);
+
+	if (left != right)
+		return (0);
+
+	return (binary_tree_is_perfect(tree->left) &&
+		binary_tree_is_perfect(tree->right));
 }
 
