@@ -42,7 +42,7 @@ int full(const binary_tree_t *tree)
 	}
 	else
 		return (0);
-	return (i);
+	return (1);
 }
 /**
  * binary_tree_is_perfect - checks if a binary tree is perfect
