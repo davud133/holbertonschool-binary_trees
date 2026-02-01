@@ -9,6 +9,10 @@ int height(const binary_tree_t *tree)
 {
 	int left = 0;
 	int right = 0;
+
+	if (tree == NULL)
+		return (0);
+
 	if (tree->left != NULL)
 		left = height(tree->left) + 1;
 	if (tree->right != NULL)
@@ -42,7 +46,6 @@ int full(const binary_tree_t *tree)
 	}
 	else
 		return (0);
-	return (0);
 }
 /**
  * binary_tree_is_perfect - checks if a binary tree is perfect
@@ -63,3 +66,4 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 		right = height(tree->right);
 	return ((left == right) && full(tree));
 }
+
